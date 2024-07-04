@@ -4,7 +4,10 @@
 <main class="w-3/4 mx-auto">
   @include('components/partials/header')
   <div class="">
-
+    @each(item in speakers)
+      <p>{{ item.name }}</p>
+    @end
+    {{-- {{ inspect(speakers) }} --}}
   </div>
 </main>
 @endslot
