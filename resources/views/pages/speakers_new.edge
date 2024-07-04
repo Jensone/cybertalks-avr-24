@@ -1,0 +1,22 @@
+@layout.main()
+
+@slot('main')
+
+@if(message)
+ <div class="bg-slate-50 text-4xl text-neutral-800">
+   {{ message }}
+ </div>
+@end
+<form action="{{ route('speakerNew') }}" method="post" class="flex flex-col gap-5 text-neutral-700">
+  {{ csrfField() }}
+  <input type="text" name="name" placeholder="Martin">
+  <input type="text" name="speciality" placeholder="Tech Lead">
+  <input type="number" name="exp" placeholder="10">
+  <input type="text" name="country" placeholder="France">
+  <button type="submit">Créer</button>
+</form>
+
+
+@endslot
+
+@end
