@@ -19,6 +19,7 @@ export default class Category extends BaseModel {
   })
   declare events: HasMany<typeof Event>
 
+
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 
